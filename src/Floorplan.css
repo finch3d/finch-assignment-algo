@@ -1,0 +1,17 @@
+.Floorplan {
+  background-color: #eee;
+  display: flex;
+  position: relative;
+}
+
+.Floorplan__image {
+  /* Flip the image vertically since SVG has the Y axis pointing down, and in
+  our world it points up. */
+  transform: scaleY(-1);
+}
+
+.Floorplan__label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
