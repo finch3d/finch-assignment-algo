@@ -4,10 +4,10 @@ import { getViewBoxForPolygon } from './getViewBoxForPolygon.js';
 export function Floorplan({ polygon, label }) {
   const viewBox = getViewBoxForPolygon(polygon, { padding: 1000 });
 
-  // Right now, we're just placing the label at the world origin (0, 0). This
-  // doesn't look very good, so replace this with your own logic to figure out
-  // an optimal position for it within the floorplan.
-  const labelPosition = [0, 0];
+  // Right now, we're just placing the label by the first point in the polygon.
+  // This clearly isn't very good, so replace this with your own logic to figure
+  // out an optimal position for it within each polygon.
+  const labelPosition = polygon.polylines[0].points[0];
 
   return (
     <div className="Floorplan">
