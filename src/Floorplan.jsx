@@ -1,5 +1,5 @@
-import "./Floorplan.css";
-import { getViewBoxForPolygon } from "./getViewBoxForPolygon.js";
+import './Floorplan.css';
+import { getViewBoxForPolygon } from './getViewBoxForPolygon.js';
 
 export function Floorplan({ polygon, label }) {
   const viewBox = getViewBoxForPolygon(polygon, { padding: 1000 });
@@ -37,7 +37,7 @@ function Image({ viewBox: { left, top, width, height }, polygon }) {
           ({ points: [firstPoint, ...restPoints] }) =>
             `M ${firstPoint[0]} ${firstPoint[1]} ${restPoints
               .map(([x, y]) => `L ${Math.round(x)},${Math.round(y)}`)
-              .join(" ")}`
+              .join(' ')}`
         )}
       />
     </svg>
