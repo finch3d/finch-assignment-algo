@@ -1,6 +1,7 @@
 .Floorplan {
   background-color: #eee;
   display: flex;
+  overflow: hidden;
   position: relative;
 }
 

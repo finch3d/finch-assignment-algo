@@ -1,4 +1,9 @@
 .App {
-  display: flex;
+  display: grid;
   gap: 2rem;
+  grid-template-columns: repeat(auto-fill, 400px);
+  margin: 6rem auto;
+  max-width: 90vw;
+  place-content: center;
+  place-items: center;
 }
